@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N30  — Премиум детейлинг</title>
+    <style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: url('photo_5206389120790823402_y.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f5f5f5;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+        header {
+            background-color: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+            header img {
+                height: 60px;
+            }
+
+        nav a {
+            color: #f5f5f5;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            nav a:hover {
+                color: #191970;
+            }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1617980054330-0a5b8d5d7b9f') center/cover;
+            text-align: center;
+            padding: 120px 20px;
+             min-height: 100dvh;
+        }
+
+            .hero h1 {
+                font-family: "Broadway", sans-serif;
+                font-weight: bold;
+                font-size: 80px;
+                color: #191970;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+            }
+
+            .hero p {
+                font-family: "Century Gothic", sans-serif;
+                font-size: 25px;
+                margin-top: 15px;
+                color: #ddd;
+            }
+
+        .call-btn {
+            display: inline-block;
+            background-color: #191970;
+            color: black;
+            padding: 18px 30px;
+            border-radius: 10px;
+            font-family: "Century Gothic", sans-serif;
+            font-size: 22px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 40px;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(18, 181, 126, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(18, 181, 126, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(18, 181, 126, 0);
+            }
+        }
+
+       .services {
+  padding: 80px 5%;
+  background-color: transparent;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+            .services h2 {
+                color: #191970;
+                margin-bottom: 30px;
+                font-size: 36px;
+            }
+
+        .service-card {
+            display: inline-block;
+            width: 280px;
+            margin: 15px;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .service-card h3 {
+                color: #22228c;
+                margin-bottom: 10px;
+            }
+.service-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-block {
+  width: 220px;
+  text-align: center;
+} 
+
+.service-btn,
+.sub-btn {
+  background-color: #222;
+  color: #191970;
+  border: 2px solid #191970;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-btn:hover,
+.sub-btn:hover {
+  background-color: #191970;
+  color: #000;
+}
+
+.sublist {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.slide img {
+  width: 80%;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+
+
+.caption {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #191970;
+  font-weight: bold;
+}
+
+.reviews {
+            padding: 60px 10%;
+            background-color: #181a1d;
+            text-align: center;
+}
+
+.reviews h2 {
+                color: #191970;
+                margin-bottom: 30px;
+                font-size: 36px;
+}
+.review {
+            background-color: #222;
+            margin: 15px auto;
+            padding: 20px;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);}
+ .review strong {
+                color: #191970;}
+.form-section {
+            background-color: #1a1d20;
+            padding: 60px 10%;
+            text-align: center;}
+
+.form-section h2 {
+                color: #191970;
+                margin-bottom: 20px;}
+form {
+            display: inline-block;
+            background-color: #222;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-align: left;
+            width: 320px; }
+form input, form textarea {
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 10px;
+                border-radius: 6px;
+                border: none;
+                background-color: #333;
+                color: #fff;
+                font-size: 16px;}
+form button {
+                background-color: #191970;
+                border: none;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: background-color 0.3s;
+                width: 100%;}
+form button:hover {
+                    background-color: #191970;}
+
+        .map {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-top: 60px;
+        }
+
+        footer {
+            background-color: #121212;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+            footer a {
+                color: #191970;
+                text-decoration: none;
+            }
+
+        .hero {
+            position: relative;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            animation: bounce 2.5s infinite ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .scroll-down::before {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 24px;
+                border-left: 3px solid white;
+                border-bottom: 3px solid white;
+                border-radius: 2px;
+                transform: rotate(-45deg);
+                transition: border-color 0.3s ease;
+            }
+
+            .scroll-down:hover::before {
+                border-color: #191970;
+            }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, 0);
+            }
+
+            50% {
+                transform: translate(-50%, -15px);
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Стили для компьютеров (пишутся первыми) */
+
+        /* Стили для планшетов */
+        @media (max-width: 1024px) {
+            /* Здесь переопределяйте стили для планшетов */
+            .container {
+                width: 90%;
+            }
+        }
+
+        /* Стили для телефонов */
+        @media (max-width: 768px) {
+            /* Здесь переопределяйте стили для телефонов */
+            .menu {
+                display: block;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+  header {
+    height: 70px;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+}
+    </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="AutoPro Detailing">
+  <nav>
+    <a href="#services">Услуги</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#form">Запись</a>
+    <a href="#map">Карта</a>
+  </nav>
+</header>
+
+<section class="hero">
+    <h1>N<sub>3</sub>O</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <p>Премиум уход и защита вашего автомобиля</p>
+    <a href="tel:+375445023863" class="call-btn">🕻 Позвонить сейчас</a>
+    <a href="#services" class="scroll-down"></a>
+</section>
+
+<section id="services" class="services">
+  <h2>Наши услуги</h2>
+  <div class="service-row">
+    <div class="service-block">
+      <button class="service-btn" data-target="body">Кузовной ремонт</button>
+      <div id="body" class="sublist">
+<!-- Кузовной ремонт -->
+<button class="sub-btn" data-img="paint.jpg" data-caption="Покраска элементов">Покраска элементов</button>
+<button class="sub-btn" data-img="restore.jpg" data-caption="Восстановление авто под ключ">Восстановление авто под ключ</button>
+<button class="sub-btn" data-img="frame.jpg" data-caption="Стапельные работы">Стапельные работы</button>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <button class="service-btn" data-target="detailing">Detailing</button>
+      <div id="detailing" class="sublist">
+      <button class="sub-btn" data-img="clean.jpg" data-caption="Химчистка">Химчистка</button>
+<button class="sub-btn" data-img="polish.jpg" data-caption="Полировка">Полировка</button>
+<button class="sub-btn" data-img="ceramic.jpg" data-caption="Керамика">Керамика</button>
+<button class="sub-btn" data-img="noise.jpg" data-caption="Шумоизоляция">Шумоизоляция</button>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <button class="service-btn" data-target="pdr">PDR</button>
+      <div id="pdr" class="sublist">
+      <!-- PDR -->
+<button class="sub-btn" data-img="pdr.jpg" data-caption="Удаление вмятин без покраски">Удаление вмятин без покраски</button>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <button class="service-btn" data-target="anticor">Антикоррозионная обработка</button>
+      <div id="anticor" class="sublist">
+        <!-- Антикор -->
+<button class="sub-btn" data-img="anticor.jpg" data-caption="Обработка днища и скрытых полостей">Обработка днища и скрытых полостей</button>
+      </div>
+    </div>
+  </div>
+
+<div class="slider-container">
+  <div class="slider-track" id="slider-track">
+    <div class="slide"><img src="покраска.webp" alt=""><p class="caption">Покраска элементов</p></div>
+    <div class="slide"><img src="images/restore.jpg" alt=""><p class="caption">Восстановление авто под ключ</p></div>
+    <div class="slide"><img src="степель.jpeg" alt=""><p class="caption">Стапельные работы</p></div>
+    <div class="slide"><img src="images/clean.jpg" alt=""><p class="caption">Химчистка</p></div>
+    <div class="slide"><img src="Полировка.jpg" alt=""><p class="caption">Полировка</p></div>
+    <div class="slide"><img src="керамика.jpg" alt=""><p class="caption">Керамика</p></div>
+    <div class="slide"><img src="images/noise.jpg" alt=""><p class="caption">Шумоизоляция</p></div>
+    <div class="slide"><img src="Удаление вмятин без покраски.jpg" alt=""><p class="caption">Удаление вмятин без покраски</p></div>
+    <div class="slide"><img src="Антикор.jpeg" alt=""><p class="caption">Обработка днища и скрытых полостей</p></div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+<section id="reviews" class="reviews">
+  <h2>Отзывы клиентов</h2>
+  <div class="review"><p><strong>Виктория Заблотская:</strong> Сделали мойку и полировку — машина как новая! Очень доволен результатом.</p></div>
+  <div class="review"><p><strong>Дмитрий Игоревич:</strong> После химчистки салон как новый, рекомендую!</p></div>
+</section>
+
+<section id="form" class="form-section">
+  <h2>Онлайн-запись</h2>
+  <form id="booking-form">
+    <input type="text" id="name" placeholder="Ваше имя" required>
+    <input type="tel" id="phone" placeholder="+375 (__) ___-__-__" required>
+    <textarea id="service" rows="3" placeholder="Какая услуга вас интересует"></textarea>
+    <button type="submit">Отправить заявку</button>
+  </form>
+  <p id="response" style="margin-top:10px; color:#12b57e;"></p>
+</section>
+
+<section id="map">
+  <iframe class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23505.64641909545!2d27.54071356808752!3d53.900601190690444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfd4b8e4d6e1%3A0x7c76e3bb53f83f4e!2z0JzQvtGB0LrQstCwLCDQn9C10YDQtdC80LAsINCR0LjQvdGB0YLQvtCy0YHQuiDQmtC-0LzQvNCw0YLQtdC70Yw!5e0!3m2!1sru!2sby!4v1734287645671!5m2!1sru!2sby"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+
+<footer>
+  <p>© 2025 AutoPro Detailing | Все права защищены</p>
+  <p>Телефон: <a href="tel:+375339175904">+375 (33) 917-59-04</a></p>
+</footer>
+
+<script>
+  const TOKEN = "YOUR_BOT_TOKEN"; // ← сюда вставь токен
+  const CHAT_ID = YOUR_CHAT_ID;   // ← сюда вставь свой ID
+
+  document.getElementById("booking-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+
+    const message = `🚗 *Новая заявка с сайта AutoPro Detailing*\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🧰 Услуга: ${service}`;
+
+    fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: "Markdown" })
+    })
+    .then(() => {
+      document.getElementById("response").innerText = "✅ Заявка успешно отправлена!";
+      document.getElementById("booking-form").reset();
+    })
+    .catch(() => {
+      document.getElementById("response").innerText = "❌ Ошибка отправки. Попробуйте позже.";
+    });
+  });
+</script>
+</body>
+<script>
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const price = card.querySelector('.price');
+      price.style.display = price.style.display === 'none' ? 'block' : 'none';
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('.service-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const targetList = document.getElementById(targetId);
+
+      // Скрыть все списки, кроме выбранного
+      document.querySelectorAll('.sublist').forEach(list => {
+        if (list !== targetList) {
+          list.style.maxHeight = '0';
+          list.style.opacity = '0';
+        }
+      });
+
+      // Переключить выбранный список
+      if (targetList.style.maxHeight === '0px' || !targetList.style.maxHeight) {
+        targetList.style.maxHeight = targetList.scrollHeight + 'px';
+        targetList.style.opacity = '1';
+      } else {
+        targetList.style.maxHeight = '0';
+        targetList.style.opacity = '0';
+      }
+    });
+  });
+</script>
+<script>
+  const sliderTrack = document.getElementById('slider-track');
+  const slides = Array.from(sliderTrack.querySelectorAll('.slide'));
+
+  const labelToIndex = {
+    "Покраска элементов": 0,
+    "Восстановление авто под ключ": 1,
+    "Стапельные работы": 2,
+    "Химчистка": 3,
+    "Полировка": 4,
+    "Керамика": 5,
+    "Шумоизоляция": 6,
+    "Удаление вмятин без покраски": 7,
+    "Обработка днища и скрытых полостей": 8
+  };
+
+  document.querySelectorAll('.sub-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const label = button.textContent.trim();
+      const index = labelToIndex[label];
+      if (index !== undefined) {
+        sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener('touchstart', function () {}, { passive: true });
+</script>
+</html>
